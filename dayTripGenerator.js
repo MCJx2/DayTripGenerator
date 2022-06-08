@@ -1,4 +1,4 @@
- console.log ("Hello World");
+ console.log ("Explore with a day trip");
 
 //array of destinations
 let listOfDestinations = ["San Marcos", "Austin", "Kerrville", "New Braunfels"];
@@ -32,72 +32,17 @@ function choiceGenerator(type, listOf){
   }
   return random
 }
-let destinationChoice = choiceGenerator("destination", listOfDestinations)
-let restaurantChoice = choiceGenerator("restaurant", typesOfRestaurants)
-
-let randomDestination
-let randomRestaurant
-let randomTransportation
-let randomEntertainment
-
-
+let destinationChoice=choiceGenerator("destination", listOfDestinations)
+let restaurantChoice=choiceGenerator("restaurant", typesOfRestaurants)
+let transportationChoice=choiceGenerator("transportation", modesOfTransportation)
+let entertainmentChoice=choiceGenerator("entertainment", formsOfEntertainment)
 
 
 //array of modes of transportation
 
 
-
-function transportationGenerator(){
-  
-    let userIsHappy = false
-  
-    while(userIsHappy === false){
-        randomTransportation = randomGenerator(modesOfTransportation)
-  
-        let userResponse = prompt(`Your mode of transportation is ${randomTransportation}. Are you okay with that?`)
-  
-        if(userResponse.toLowerCase() === 'yes'){
-          alert(`Enjoy your ${randomTransportation}`)
-         
-          userIsHappy = true
-        }else if(userResponse.toLowerCase() === 'no'){
-          userIsHappy = false
-        }
-    }
-  }
-  
-  transportationGenerator()
-
-
-  //array forms of entertainment
-
-
-
-function entertainmentGenerator(){
-  
-    let userIsHappy = false
-  
-    while(userIsHappy === false){
-        randomEntertainment = randomGenerator(formsOfEntertainment)
-  
-        let userResponse = prompt(`Your form of entertainment is ${randomEntertainment}. Are you ready for that?`)
-  
-        if(userResponse.toLowerCase() === 'yes'){
-          alert(`Enjoy your ${randomEntertainment}`)
-         
-          userIsHappy = true
-        }else if(userResponse.toLowerCase() === 'no'){
-          userIsHappy = false
-        }
-    }
-  }
-  
-  entertainmentGenerator()
-
-  console.log(`${randomDestination}/${randomRestaurant}/${randomTransportation}/${randomEntertainment}`)
+  console.log(`${destinationChoice}/${restaurantChoice}/${transportationChoice}/${entertainmentChoice}`)
   //array dayTripGenerator
-
-
 
 // function destinationChecker(destinationList){
 //   let user_choice =  prompt("Select your destination")
